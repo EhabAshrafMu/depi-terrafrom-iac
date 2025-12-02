@@ -1,2 +1,14 @@
-depi-key.pem
+# Terraform
+*.tfstate
+*.tfstate.*
 .terraform/
+*.tfvars.json
+
+# Secrets
+*.pem
+*.key
+.env
+
+# OS
+.DS_Store
+Thumbs.db
