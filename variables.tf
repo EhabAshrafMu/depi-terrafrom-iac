@@ -13,7 +13,7 @@ variable "environment" {
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 variable "key_name" {
@@ -21,24 +21,6 @@ variable "key_name" {
   type        = string
 }
 
-
-variable "domain_name" {
-  description = "Domain name for the application"
-  type        = string
-  default     = ""
-}
-
-variable "django_secret_key" {
-  description = "Django secret key"
-  type        = string
-  sensitive   = true
-}
-
-variable "db_password" {
-  description = "PostgreSQL database password"
-  type        = string
-  sensitive   = true
-}
 
 variable "github_repo_url" {
   description = "GitHub repository URL"

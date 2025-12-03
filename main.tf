@@ -42,9 +42,6 @@ resource "aws_instance" "diginnocent" {
   }
 
   user_data = templatefile("${path.module}/user-data.sh", {
-    django_secret_key = var.django_secret_key
-    db_password       = var.db_password
-    domain_name       = var.domain_name != "" ? var.domain_name : aws_eip.diginnocent.public_ip
     github_repo_url   = var.github_repo_url
   })
 

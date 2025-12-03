@@ -1,3 +1,7 @@
+data "aws_availability_zones" "available" {
+    state = "available"
+}
+
 resource "aws_vpc" "main" {
     cidr_block = "10.0.0.0/16"
     enable_dns_support = true
@@ -51,8 +55,4 @@ resource "aws_route_table" "public" {
 resource "aws_route_table_association" "public" {
     subnet_id = aws_subnet.public.id
     route_table_id = aws_route_table.public.id
-}
-
-data "aws_availability_zones" "available" {
-    state = "available"
 }
